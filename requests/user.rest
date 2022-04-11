@@ -1,0 +1,43 @@
+POST http://localhost:3000/create/user/ HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"John",
+    "lastName":"Doe",
+    "email":"test@email.com",
+    "password":"PlainTextPassword"
+}
+
+###
+
+PUT http://localhost:3000/update/user/d88ba5a4-b157-468b-91c3-4a2314344708 HTTP/1.1
+content-type: application/json
+
+{
+    "organization": "NKU",
+    "title":"Professor",
+    "isVerified": true,
+    "email": "update@email.com",
+    "isAuthor": true
+}
+
+### User Exists
+
+GET http://localhost:3000/user/d88ba5a4-b157-468b-91c3-4a2314344708
+Content-Type: application/json
+
+{}
+
+### Does Not exist
+
+GET http://localhost:3000/user/6f0619ae-8170-45ad-b6a4-1367afd3e9cd
+Content-Type: application/json
+
+{}
+
+###
+
+DELETE http://localhost:3000/user/6282e2a7-db25-4d2f-85a1-f2c8f3e2cca1
+Content-Type: application/json
+
+{}

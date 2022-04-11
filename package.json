@@ -1,0 +1,26 @@
+{
+    "name": "440-final-backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "watch": {
+        "start": {
+            "patterns": [
+                "src"
+            ],
+            "extensions": "js"
+        }
+    },
+    "scripts": {
+        "watch": "npm-watch",
+        "start": "node ./src/index.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.3",
+        "mongodb": "^4.4.1",
+        "npm-watch": "^0.11.0",
+        "uuid": "^8.3.2"
+    }
+}
